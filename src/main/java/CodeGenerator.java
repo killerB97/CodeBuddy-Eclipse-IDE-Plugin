@@ -1,8 +1,8 @@
 import java.util.Scanner;
-
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
 
 public class CodeGenerator {
 
@@ -23,7 +23,23 @@ public class CodeGenerator {
         url = url.substring(6, url.indexOf("&"));
         url = url.substring(1); // remove '='
 
-        System.out.println(url);
+        try {
+            Document doc = Jsoup.connect(url).userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36").get();
+            Elements temp = doc.select("pre.line-numbers");
+            int i = 1;
+            for (Element code : temp) {
+                System.out.println("Solution "+i+":"+"\n");
+                System.out.println(code.getElementsByClass("language-java").first().text());
+                System.out.println("\n");
+                i++;
+            }
+
+        }
+
+
+        catch(IOException e){
+                e.printStackTrace();
+            }
 
     }
 }
