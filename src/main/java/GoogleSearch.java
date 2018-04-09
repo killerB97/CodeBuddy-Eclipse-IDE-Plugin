@@ -10,8 +10,8 @@ public class GoogleSearch {
 
     public static Elements search(String searchQuery) {
         try {
-            String url = GOOGLE_SEARCH_QUERY_URL + searchQuery + "&num=" + "1";
-            Document doc = Jsoup.connect(url).userAgent("Mozilla/5.0").get();
+            String url = GOOGLE_SEARCH_QUERY_URL + searchQuery + "&num=" + "10";
+            Document doc = Jsoup.connect(url).userAgent("Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)").timeout(5000).get();
             Elements results = doc.select("h3.r > a");
             return results;
         } catch (Exception e) {
