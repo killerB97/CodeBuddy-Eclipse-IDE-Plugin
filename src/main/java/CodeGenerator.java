@@ -47,6 +47,11 @@ public class CodeGenerator {
                 Elements temp = doc.select("div.answer");
                 for (Element code : temp) {
                     solutions.add(code.getElementsByClass("lang-java prettyprint prettyprinted").first().text());
+                }}
+              else if (website.equals("gist.github"))  {
+                Elements temp = doc.select("div.blob-wrapper data type-text");
+                for ( Element code: temp){
+                    solutions.add(code.getElementsByClass("div.blob-wrapper data type-text").first().text());
                 }
             }
 
