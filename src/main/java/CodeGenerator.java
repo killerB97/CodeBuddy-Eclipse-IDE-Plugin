@@ -89,11 +89,23 @@ public class CodeGenerator {
             }
         }
 
+        if(!isFound){
+            for (String url : urls) {
+                if (url.contains("gist.github")) {
+                    websiteUrl[0] = "gist.github";
+                    websiteUrl[0] = url;
+                    isFound = true;
+                    break;
+                }
+            }
+        }
+
         if (!isFound) {
             for (String url : urls) {
                 if (url.contains("stackoverflow")) {
                     websiteUrl[0] = "stackoverflow";
                     websiteUrl[0] = url;
+                    isFound = true;
                     break;
                 }
             }
