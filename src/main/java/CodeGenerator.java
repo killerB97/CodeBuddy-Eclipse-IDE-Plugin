@@ -54,6 +54,11 @@ public class CodeGenerator {
                     solutions.add(code.getElementsByClass("div.blob-wrapper data type-text").first().text());
                 }
             }
+              else if (website.equals("mykyong")){
+                Elements temp = doc.select("code.language-java");
+                for ( Element code: temp){
+                    solutions.add(code.getElementsByClass("language-java").first().text());
+            }}
 
         } catch (Exception e) {
             e.printStackTrace();
