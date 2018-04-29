@@ -1,0 +1,15 @@
+<idea-plugin>
+  <id>org.jetbrains.plugins.codelib.ToolWindow</id>
+  <name>Tool Window</name>
+  <description>Codelib Plugin</description>
+  <version>1.0-SNAPSHOT</version>
+  <vendor email="support@codelib.com" url="http://www.codelib.com">Codelib</vendor>
+  <change-notes>
+      Add change notes here.&lt;br&gt;
+      &lt;em&gt;most HTML tags may be used&lt;/em&gt;</change-notes>
+  <idea-version since-build="173.4548" until-build="173.*"/>
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow id="Codelib" secondary="true" icon="/myToolWindow/plus.png" anchor="right" factoryClass="myToolWindow.MyToolWindowFactory"/>
+  </extensions>
+  <actions/>
+</idea-plugin>

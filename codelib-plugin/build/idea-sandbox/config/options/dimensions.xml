@@ -1,0 +1,8 @@
+<application>
+  <component name="DimensionService">
+    <location key="new project wizard.0.0.1280.800" x="289" y="23" />
+    <location key="WELCOME_SCREEN.0.0.1280.800" x="639" y="349" />
+    <location key="com.intellij.ide.util.TipDialog.0.0.1280.800" x="277" y="214" />
+    <location key="IdeErrosDialog.0.0.1280.800" x="153" y="176" />
+  </component>
+</application>

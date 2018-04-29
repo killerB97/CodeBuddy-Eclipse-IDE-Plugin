@@ -1,0 +1,19 @@
+<application>
+  <component name="ActionsCollector">
+    <counts>
+      <entry action="ActivateFavoritesToolWindow" count="1" />
+      <entry action="ActivateMySampleToolWindowToolWindow" count="2" />
+      <entry action="ActivateSampleCalendarToolWindow" count="4" />
+      <entry action="EditorBackSpace" count="33" />
+      <entry action="EditorCopy" count="1" />
+      <entry action="EditorEnter" count="5" />
+      <entry action="EditorLineStartWithSelection" count="8" />
+      <entry action="EditorPaste" count="1" />
+      <entry action="HideAllWindows" count="2" />
+      <entry action="MaximizeToolWindow" count="2" />
+      <entry action="ReformatCode" count="1" />
+      <entry action="ViewToolBar" count="1" />
+      <entry action="ViewToolButtons" count="1" />
+    </counts>
+  </component>
+</application>
