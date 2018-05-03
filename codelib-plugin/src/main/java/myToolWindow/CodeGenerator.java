@@ -49,10 +49,13 @@ public class CodeGenerator {
                     solutions.add(code.getElementsByClass("lang-java prettyprint prettyprinted").first().text());
                 }
             } else if (website.equals("gist.github")) {
-                Elements temp = doc.select("div.blob-wrapper.data.type-java");
-                for (Element code : temp) {
-                    solutions.add(code.getElementsByClass("blob-wrapper data type-java").first().text());
+                Elements temp = doc.select("td[class=blob-code blob-code-inner js-file-line]");
+                String Answer = "";
+                for (Element i : temp) {
+                    Answer = Answer.concat(i.text());
+                    Answer = Answer.concat(System.lineSeparator());
                 }
+                solutions.add(Answer);
             } else if (website.equals("mkyong")) {
                 Elements temp = doc.select("code.language-java");
                 for (Element code : temp) {
